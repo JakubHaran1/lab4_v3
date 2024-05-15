@@ -23,7 +23,7 @@ elif [ "$first" = "--logs" ] || [ "$first" = "-l" ]; then
 		echo "Data kiedy został utworzony plik $(date)" >> "file_name"
 	done
 elif [ "$first" = "--help" ] || [ "$first" = "-h" ]; then
-	echo "--logs -> stworzenie 100 plików log"
-	echo "--logs x -> stworzenie x plików log"
-	echo "--help -> wyświetli pomoc"
+	echo "--logs lub -l -> stworzenie 100 plików log"
+	echo "--logs x lub -l x -> stworzenie x plików log"
+	echo "--help lub -h -> wyświetli pomoc"
 fi
