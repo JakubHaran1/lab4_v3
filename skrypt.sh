@@ -15,14 +15,14 @@ if [ "$first" = "--logs" ] || [ "$first" = "-l" ] && [ -n "$second" ]; then
                 echo "Nazwa skryptu: $0" >> "file_name"
                 echo "Data kiedy został utworzony plik $(date)" >> "file_name"
         done
-elif [ "$first" = "--logs" ] || [ "$first"="-l" ]; then
+elif [ "$first" = "--logs" ] || [ "$first" = "-l" ]; then
 	for (( i=1; i<=100; i++ )); do
 		file_name="log${i}.txt"
 		echo "Nazwa pliku: $file_name" > "$file_name"
 		echo "Nazwa skryptu: $0" >> "file_name"
 		echo "Data kiedy został utworzony plik $(date)" >> "file_name"
 	done
-elif [ "$first"="--help" ]; then
+elif [ "$first" = "--help" ] || [ "$first" = "-h" ]; then
 	echo "--logs -> stworzenie 100 plików log"
 	echo "--logs x -> stworzenie x plików log"
 	echo "--help -> wyświetli pomoc"
