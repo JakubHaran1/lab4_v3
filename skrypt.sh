@@ -22,4 +22,8 @@ elif [ "$first" = "--logs" ]; then
 		echo "Nazwa skryptu: $0" >> "file_name"
 		echo "Data kiedy został utworzony plik $(date)" >> "file_name"
 	done
+elif [ "$first"="--help" ]; then
+	echo "--logs -> stworzenie 100 plików log"
+	echo "--logs x -> stworzenie x plików log"
+	echo "--help -> wyświetli pomoc"
 fi
