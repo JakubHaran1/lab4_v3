@@ -8,7 +8,7 @@ if [ "$1" = "--date" ]; then
 fi
 echo "*log*" > .gitignore
 
-if [ "$first" = "--logs" ] && [ -n "$second" ]; then
+if [ "$first" = "--logs" ] || [ "$first" = "-l" ] && [ -n "$second" ]; then
 	 for (( i=1; i<="$second"; i++ )); do
                 file_name="log${i}.txt"
                 echo "Nazwa pliku: $file_name" > "$file_name"
