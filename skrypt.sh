@@ -15,7 +15,7 @@ if [ "$first" = "--logs" ] || [ "$first" = "-l" ] && [ -n "$second" ]; then
                 echo "Nazwa skryptu: $0" >> "file_name"
                 echo "Data kiedy został utworzony plik $(date)" >> "file_name"
         done
-elif [ "$first" = "--logs" ]; then
+elif [ "$first" = "--logs" ] || [ "$first"="-l" ]; then
 	for (( i=1; i<=100; i++ )); do
 		file_name="log${i}.txt"
 		echo "Nazwa pliku: $file_name" > "$file_name"
