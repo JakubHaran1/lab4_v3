@@ -34,4 +34,13 @@ elif [ "$first" = "--init" ]; then
 	git clone "$repo_url" .
 	export PATH="$PWD:$PATH"
 	echo "Repozytorium zostało sklonowane, a ścieżka została dodana do zmiennej PATH."
+
+elif [ "$first" = "--error 30" ] || [ "$first" = "-e 30" ]; then
+	mkdir errorx
+	for (( i=1; i<=100; i++ )); do
+		file_name="errorx${i}.txt"
+		touch "./errorx/$file_name"
+	done
 fi
+
+echo "error/" >> .gitignore
