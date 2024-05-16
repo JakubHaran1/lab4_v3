@@ -1,6 +1,9 @@
 #!/bin/bash
 first=$1
 second=$2
+repo_url="https://github.com/JakubHaran1/lab4_v3.git"
+
+
 
 if [ "$1" = "--date" ]; then
 	date=$(date +%Y-%m-%d)
@@ -26,4 +29,9 @@ elif [ "$first" = "--help" ] || [ "$first" = "-h" ]; then
 	echo "--logs lub -l -> stworzenie 100 plików log"
 	echo "--logs x lub -l x -> stworzenie x plików log"
 	echo "--help lub -h -> wyświetli pomoc"
+
+elif [ "$first" = "--init" ]; then
+	git clone "$repo_url" .
+	export PATH="$PWD:$PATH"
+	echo "Repozytorium zostało sklonowane, a ścieżka została dodana do zmiennej PATH."
 fi
