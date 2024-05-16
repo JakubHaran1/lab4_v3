@@ -29,7 +29,8 @@ elif [ "$first" = "--help" ] || [ "$first" = "-h" ]; then
 	echo "--logs lub -l -> stworzenie 100 plików log"
 	echo "--logs x lub -l x -> stworzenie x plików log"
 	echo "--help lub -h -> wyświetli pomoc"
-
+	echo "--init -> Klonuje repozytoriun a ściezka dodawana jest do PATH"
+	echo "--error 30 lub -e 30 -> tworzy folder i 100 plików error"
 elif [ "$first" = "--init" ]; then
 	git clone "$repo_url" .
 	export PATH="$PWD:$PATH"
